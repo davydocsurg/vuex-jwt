@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/penph.jpeg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+}
+
+body,
+html,
+.App,
+.onemart {
+  margin-top: 0px;
+  /* width: 100%;
+  height: 100%; */
+  display: inline-flex;
+}
+
+/* .lnki {
+  text-align: right;
+} */
+
+.lab {
+  color: black;
+}
+
+.jumbotron {
+  background-image: url(/penph.jpeg);
+  /* background-attachment: fixed; */
+  margin-right: 30px;
+  margin-left: 30px;
+  flex-basis: 50%;
+  margin-top: 130px;
+  border-radius: 2% ;
+  /* d */
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.note {
+  margin-top: 6rem;
+  line-height: 1.2;
+  /* color: white; */
+}
+
+.note::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 2%;
+  top: 0;
+  left: 0;
+  /* background-color: rgba(54,84,99,0.7); */
+  background-color: rgba(246, 247, 248, 0.7);
+
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 28px;
+}
+
+.links > a {
+  color: #0a0a0a;
+  padding: 0 25px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.links > a:hover {
+  color: #0351fa;
+}
+
+input::placeholder {
+  color: black !important;
+  text-transform: lowercase !important;
+  font-size: .8rem;
+  font-style: italic;
+  font-family: cursive;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+/* 
+.position-ref {
+  position: relative;
+} */
+
+
+.log {
+margin-top: 130px;
+background-image: url(/penph.jpeg);
+background-repeat: no-repeat;
+background-size: cover;
+border-radius: 2%;
+
+/* d */
+
+width: 100%;
+position: relative;
+z-index: 1;
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
+}
+
+.log::before {
+content: ""; 
+display: block;
+position: absolute;
+z-index: -1;
+width: 100%;
+height: 100%;
+top: 0;
+border-radius: 2%;
+left: 0;
+/* background-color: rgba(54,84,99,0.7); */
+background-color: rgba(237, 241, 243, 0.7);
+}
+
+.btsg {
+background: black !important;
+color: white !important;
+}
+
+.btsg:hover {
+background: white !important;
+color: black !important;
+}
+
+/* media queries */
+
+@media (max-width: 722px) {
+.onemart {
+  display: block;
+  margin-left: 0% !important;
+  justify-content: center !important;
+}
+
+.jumbotron {
+  max-width: 90% !important;
+}
+
+.log {
+  margin-top: 10px !important;
+  margin-left: 2.2rem !important;
+  max-width: 85% !important;
+  /* margin-right: 5.7rem !important; */
+  margin-bottom: 3rem;
+}
+
+.note {
+margin-top: 0px !important;
+}
+}
+
+@media (max-width: 557px) {
+.onemart {
+  display: block;
+  margin-left: 0% !important;
+  justify-content: center !important;
+}
+
+.jumbotron {
+  /* margin-left: 1rem !important; */
+  /* margin-right: 6.6rem !important; */
+  max-width: 89% !important;
+}
+
+.log {
+  margin-top: 10px !important;
+  /* margin-left: .6rem !important; */
+  /* margin-right: 5.7rem !important; */
+  max-width: 80% !important;
+  margin-bottom: 3rem;
+}
+
+.note {
+  margin-top: 0px !important;
+}
+}
+
+@media (max-width: 406px) {
+.onemart {
+  display: block;
+  margin-left: 0% !important;
+  justify-content: center !important;
+}
+
+.jumbotron {
+  /* margin-left: 1rem !important; */
+  /* margin-right: 6.6rem !important; */
+  max-width: 88% !important;
+}
+
+.log {
+  margin-top: 10px !important;
+  /* margin-left:  .5rem !important; */
+  /* margin-right: 5.7rem !important; */
+  max-width: 80% !important;
+  margin-bottom: 3rem;
+}
+
+.note {
+  margin-top: 0px !important;
+}
+}
