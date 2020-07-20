@@ -5,16 +5,24 @@
         <h3>Users from secure api end point:</h3>
         <em v-if="users.loading">Loading users...</em>
         <span v-if="users.error" class="text-danger">ERROR: {{users.error}}</span>
-        <ul v-if="users.items">
+        <div v-if="">
+        <ol v-if="users.items">
             <li v-for="user in users.items" :key="user.id">
-                {{user.firstName + ' ' + user.lastName}}
+               <b>Name: </b> <b class="text-primary ">{{user.firstName + ' ' + user.lastName}}</b>
+               <br>
+               <b>Username: </b> <i class="text-success">{{user.username}}</i>
+               <br>
+               <b>Password: </b> <small class="text-muted"> "{{user.password}}" </small>
+               <br>
                 <span v-if="user.deleting"><em> - Deleting...</em></span>
                 <span v-else-if="user.deleteError" class="text-danger"> - ERROR: {{user.deleteError}}</span>
-                <span v-else> - <a @click="deleteUser(user.id)" class="text-danger">Delete <i class="fa fa-trash"></i></a></span>
+                <span v-else> - <a @click="deleteUser(user.id)" class="text-danger">Delete {{user.username}} <i class="fa fa-trash"></i></a></span>
+                <hr>
             </li>
-        </ul>
+        </ol>
+        </div>
         <p>
-            <router-link to="/login">Logout</router-link>
+            <router-link to="/login" class="btn btn-danger">Sign Out <i class="fas fa-sign-out-alt"></i></router-link>
         </p>
     </div>
 </template>

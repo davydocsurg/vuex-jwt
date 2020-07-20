@@ -21,18 +21,20 @@
             </div>
             <div class="form-group">
                 <label htmlFor="password">Password</label>
-                <input type="password" v-model="user.password" v-validate="{ required: true, min: 6 }" name="password" class="form-control" :class="{ 'is-invalid': submitted && errors.has('password') }" placeholder="enter password" />
+                <input type="password" v-model="user.password" v-validate="{ required: true, min: 8 }" name="password" class="form-control" :class="{ 'is-invalid': submitted && errors.has('password') }" placeholder="enter password" />
                 <div v-if="submitted && errors.has('password')" class="invalid-feedback text-danger">{{ errors.first('password') }}</div>
             </div>
-						<div class="form-group">
+			<div class="form-group">
                 <label htmlFor="confirm_password">Confirm Password</label>
-                <input type="password" v-model="user.password" v-validate="{ required: true, min: 6 }" name="confirm_password" class="form-control" :class="{ 'is-invalid': submitted && errors.has('password') }" placeholder="confirm password" />
+                <input type="password" v-model="user.password" v-validate="{ required: true, min: 8 }" name="confirm_password" class="form-control" :class="{ 'is-invalid': submitted && errors.has('password') }" placeholder="confirm password" />
                 <div v-if="submitted && errors.has('password')" class="invalid-feedback text-danger">{{ errors.first('password') }}</div>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary" :disabled="status.registering">Register</button>
+                <button class="btn btn-primary" :disabled="status.registering">Sign Up</button>
                 <img v-show="status.registering" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-                <router-link to="/login" class="btn btn-link">Cancel</router-link>
+                <hr>
+                <small class="text-dark">Already have an account?</small>
+                <router-link to="/login" class="btn btn-link log">Sign In</router-link>
             </div>
         </form>
 		</div>
@@ -51,7 +53,7 @@ export default {
                 lastName: '',
                 username: '',
                 password: '',
-								confirm_password: ''
+				confirm_password: ''
             },
             submitted: false
         }
@@ -82,6 +84,11 @@ export default {
     font-style: italic;
     font-family: cursive;
   }
+
+.log:hover {
+    font-style: italic !important;
+    font-family: cursive !important;
+}
 
 </style>
 
